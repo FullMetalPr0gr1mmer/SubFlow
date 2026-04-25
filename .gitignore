@@ -1,0 +1,17 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.next/
+.vercel
+.DS_Store
+*.log
+*.tsbuildinfo
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+.claude/*.lock

@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: subflow-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: FRONTEND_URL
+        sync: false
+      - key: ADMIN_EMAIL
+        value: kareem.hosny2001@gmail.com

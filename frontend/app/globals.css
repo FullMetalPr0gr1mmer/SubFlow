@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #2563EB;
+  --brand-hover: #1D4ED8;
+  --brand-light: #EFF6FF;
+  --accent: #0EA5E9;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --canvas: #FAFBFC;
+  --sidebar-bg: #0F172A;
+  --sidebar-text: #94A3B8;
+  --card-bg: #FFFFFF;
+  --border: #E2E8F0;
+  --ink: #0F172A;
+  --ink-muted: #64748B;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html,
+body {
+  background-color: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.gradient-sidebar {
+  background: linear-gradient(180deg, #0F172A 0%, #111F3A 100%);
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #E2E8F0; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #CBD5E1; }
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 focus-visible:ring-offset-2;
+}
